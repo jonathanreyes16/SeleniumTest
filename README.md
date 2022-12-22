@@ -17,6 +17,6 @@ To run the tests, you have to go to PostsTests and can run the tests individuall
 
 
 
-Only 4 tests pass right now, i couldn't find how to get the text from the alert in test 2 and 3.
+Only 4 tests pass right now, i couldn't find how to get the text from the alert in test 2 and 3, any tip on that part would be apreciated.
 
  
