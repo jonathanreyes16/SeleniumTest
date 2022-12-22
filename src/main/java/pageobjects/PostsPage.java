@@ -95,7 +95,7 @@ public class PostsPage extends BasePage{
     }
 
 
-    @FindBy(how = How.XPATH, using = "//a[@class=btn-outline-primary]")
+    @FindBy(how = How.CLASS_NAME, using = "btn-outline-primary")
     private WebElement EditPostButton;
 
     public WebElement getEditPostsButton(){

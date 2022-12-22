@@ -35,15 +35,11 @@ public class PostsTests extends BaseTest{
 
     @Test
     public void testUpdateOnePost(){
-        postSteps.openNewPost();
-        postSteps.fillPostCorrectly();
         postSteps.updatePostCompletly();
     }
 
     @Test
     public void testPartialUpdatePost(){
-        postSteps.openNewPost();
-        postSteps.fillPostCorrectly();
         postSteps.partialUpdate();
     }
 

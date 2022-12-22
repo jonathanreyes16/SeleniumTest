@@ -88,24 +88,33 @@ public class PostSteps extends BaseSteps{
         postsPage.getPosts().click();
         postsPage.getLatestPosts().click();
         postsPage.getEditPostsButton().click();
-        fillPostCorrectly();
+        postsPage.getTextboxPostTitle().sendKeys(" post updated");
+        String Title = postsPage.getTextboxPostTitle().getAttribute("value");
+        postsPage.getTextboxPostSubTitle().sendKeys(" Subtitle updated");
+        String Subtitle = postsPage.getTextboxPostSubTitle().getAttribute("value");
+        postsPage.getTextboxPostBody().sendKeys("body Updated");
+        String body = postsPage.getTextboxPostBody().getAttribute("value");
+        postsPage.getBtnEdit().click();
+        VerifyPostData(Title,Subtitle,body);
+        VerifyUsername();
     }
+
 
     public void partialUpdate(){
         postsPage.getPosts().click();
         postsPage.getLatestPosts().click();
         postsPage.getEditPostsButton().click();
-        postsPage.getTxtPostTitle().sendKeys(" post updated");
-        String Title = postsPage.getTextboxPostTitle().getText();
+        String Title = postsPage.getTextboxPostTitle().getAttribute("value");
         postsPage.getTextboxPostSubTitle().sendKeys(" Subtitle updated");
-        String Subtitle = postsPage.getTextboxPostSubTitle().getText();
-        postsPage.getTxtPostBody().sendKeys("body Updated");
-        String body = postsPage.getTxtPostBody().getText();
+        String Subtitle = postsPage.getTextboxPostSubTitle().getAttribute("value");
+        postsPage.getTextboxPostBody().sendKeys("body Updated");
+        String body = postsPage.getTextboxPostBody().getAttribute("value");
         postsPage.getBtnEdit().click();
-
         VerifyPostData(Title,Subtitle,body);
         VerifyUsername();
     }
+
+
 
     public void editAnotherUserPost() {
         webDriver.get("https://sheltered-mesa-19374.herokuapp.com/posts/209/edit/");
